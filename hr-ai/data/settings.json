@@ -1,0 +1,36 @@
+{
+  "company_name": "サンプル株式会社（架空）",
+  "contact": "総務担当（soumu@example.com）",
+  "allowed_email_domains": [
+    "example.com"
+  ],
+  "roi": {
+    "minutes_per_question_manual": 10,
+    "minutes_per_question_bot": 1,
+    "minutes_per_draft_manual": 45,
+    "minutes_per_draft_with_ai": 12,
+    "hourly_cost_jpy": 2500
+  },
+  "contact_email": "soumu@example.com",
+  "attendance": {
+    "standard_hours_per_day": 8,
+    "overtime_warn_hours": 30,
+    "paid_leave_min_days": 5,
+    "paid_leave_obligation_min_grant": 10,
+    "fiscal_year_start": "04-01",
+    "alert_months_before_year_end": 6,
+    "holidays": [
+      "2026-10-12"
+    ]
+  },
+  "interview_slots": [
+    "11/10 10:00",
+    "11/11 14:00",
+    "11/12 16:00"
+  ],
+  "slack": {
+    "approvers": {
+      "U0APPROVER": "総務 太郎"
+    }
+  }
+}

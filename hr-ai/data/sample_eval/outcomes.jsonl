@@ -1,0 +1,3 @@
+{"employee": "E02", "metric": "月間処理件数", "start": 40, "end": 58, "unit": "件", "from": "2026-03", "to": "2026-09", "note": ""}
+{"employee": "E03", "metric": "1件あたり対応時間", "start": 45, "end": 38, "unit": "分", "from": "2026-03", "to": "2026-09", "note": ""}
+{"employee": "E01", "metric": "月間対応件数", "start": 120, "end": 135, "unit": "件", "from": "2026-03", "to": "2026-09", "note": ""}

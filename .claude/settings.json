@@ -1,0 +1,89 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/*.p12)",
+      "Read(**/id_rsa*)",
+      "Read(**/id_ed25519*)",
+      "Read(**/.ssh/**)",
+      "Read(**/.aws/**)",
+      "Read(**/.netrc)",
+      "Read(**/.npmrc)",
+      "Read(**/credentials*)",
+      "Read(**/secrets.*)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Write(**/.env)",
+      "Write(**/.env.*)",
+      "Bash(printenv:*)",
+      "Bash(env)",
+      "Bash(cat **/.env*)",
+      "Bash(cat ~/.ssh/**)",
+      "Bash(cat ~/.aws/**)",
+      "Read(**/.envrc)",
+      "Read(**/.dev.vars)",
+      "Read(**/.pgpass)",
+      "Read(**/.pypirc)",
+      "Read(**/.git-credentials)",
+      "Read(**/*.p8)",
+      "Read(**/*.pfx)",
+      "Read(**/*.jks)",
+      "Read(**/*.keystore)",
+      "Read(**/*.ppk)",
+      "Read(**/*.kdbx)",
+      "Read(**/*.tfvars)",
+      "Read(**/terraform.tfstate*)",
+      "Read(**/application_default_credentials.json)",
+      "Read(**/client_secret*.json)",
+      "Read(**/service-account*.json)",
+      "Read(**/.kube/**)",
+      "Read(**/.gnupg/**)",
+      "Read(**/.docker/**)",
+      "Read(**/.azure/**)",
+      "Read(**/.config/gcloud/**)",
+      "Read(**/.config/gh/**)",
+      "Read(**/.bash_history)",
+      "Read(**/.zsh_history)",
+      "Read(**/Library/Keychains/**)",
+      "Edit(**/.envrc)",
+      "Write(**/.envrc)",
+      "Edit(**/id_rsa*)",
+      "Write(**/id_rsa*)",
+      "Edit(**/id_ed25519*)",
+      "Write(**/id_ed25519*)",
+      "Edit(**/.ssh/**)",
+      "Write(**/.ssh/**)",
+      "Edit(**/.aws/**)",
+      "Write(**/.aws/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|MultiEdit|NotebookEdit|Grep|Glob|Bash|WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "G=\"${CLAUDE_PROJECT_DIR:-$PWD}/.claude/hooks/guard.py\"; if [ -f \"$G\" ] && command -v python3 >/dev/null 2>&1; then exec python3 -I \"$G\" pre; fi; exit 0",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash|Read|WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "G=\"${CLAUDE_PROJECT_DIR:-$PWD}/.claude/hooks/guard.py\"; if [ -f \"$G\" ] && command -v python3 >/dev/null 2>&1; then exec python3 -I \"$G\" post; fi; exit 0",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

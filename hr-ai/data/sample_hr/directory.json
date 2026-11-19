@@ -1,0 +1,27 @@
+{
+ "E01": {
+  "email": "e01@example.com",
+  "manager": "M01",
+  "paid_leave_granted": 12,
+  "leave_taken_before": 6,
+  "track": true
+ },
+ "E02": {
+  "email": "e02@example.com",
+  "manager": "M01",
+  "paid_leave_granted": 12,
+  "leave_taken_before": 1,
+  "track": true
+ },
+ "E03": {
+  "email": "e03@example.com",
+  "manager": "M01",
+  "paid_leave_granted": 10,
+  "leave_taken_before": 0,
+  "track": true
+ },
+ "M01": {
+  "email": "m01@example.com",
+  "track": false
+ }
+}

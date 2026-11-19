@@ -1,0 +1,28 @@
+{
+  "company_name": "サンプル株式会社",
+  "model": "claude-sonnet-5-5",
+  "auto_reply": {
+    "enabled": true,
+    "min_confidence": 0.8,
+    "require_kb_grounding": true,
+    "auto_categories": ["faq", "general"]
+  },
+  "always_escalate_categories": ["complaint", "legal", "refund", "bug"],
+  "escalation_keywords": ["訴訟", "弁護士", "個人情報", "漏洩", "返金", "解約", "消費者センター"],
+  "routes": {
+    "complaint": "support-lead",
+    "legal": "legal",
+    "refund": "finance",
+    "bug": "engineering",
+    "sales": "sales",
+    "faq": "support",
+    "general": "support"
+  },
+  "roi": {
+    "minutes_per_inquiry_manual": 8,
+    "minutes_per_inquiry_with_ai": 1.5,
+    "minutes_per_document_manual": 6,
+    "minutes_per_document_with_ai": 0.5,
+    "hourly_cost_jpy": 3000
+  }
+}

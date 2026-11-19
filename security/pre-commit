@@ -1,0 +1,6 @@
+#!/bin/sh
+# git pre-commit: ステージ内のシークレットを検出したらコミット中止。
+# 導入: sh security/install_git_hook.sh  (git init 後)
+ROOT=$(git rev-parse --show-toplevel)
+python3 "$ROOT/security/scan_secrets.py" --staged --no-pii || {
+  echo "コミット中止: 機密情報の可能性。誤検知なら行末に secscan:ignore を付与。" >&2; exit 1; }

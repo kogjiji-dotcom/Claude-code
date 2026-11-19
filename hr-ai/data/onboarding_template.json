@@ -1,0 +1,31 @@
+{
+ "items": [
+  {
+   "item": "雇用契約書の返送",
+   "owner": "本人",
+   "due_offset": -7
+  },
+  {
+   "item": "入社日の案内（集合時間・持ち物）の送付",
+   "owner": "総務",
+   "due_offset": -5
+  },
+  {
+   "item": "扶養控除等申告書・通勤経路届の提出",
+   "owner": "本人",
+   "due_offset": -3
+  },
+  {
+   "item": "PC・アカウント・社員証の準備",
+   "owner": "総務",
+   "due_offset": -2
+  },
+  {
+   "item": "社会保険・雇用保険の資格取得手続",
+   "owner": "総務",
+   "due_offset": 5,
+   "human_only": true,
+   "note": "人が専用ソフト／e-Govで実施"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+# --- Secrets / credentials ---
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.ppk
+*.kdbx
+id_rsa*
+id_ed25519*
+id_ecdsa*
+!*.pub
+.netrc
+.npmrc
+.pypirc
+.pgpass
+.git-credentials
+credentials
+credentials.json
+secrets.*
+service-account*.json
+.aws/
+.ssh/
+.gnupg/
+.kube/
+terraform.tfstate*
+*.tfvars
+
+# --- Claude Code local state ---
+.claude/settings.local.json
+.claude/*.local.*
+
+# --- Logs / dumps / data ---
+*.log
+*.sqlite
+*.db
+*.dump
+*.sql.gz
+*.bak
+*.csv.local
+private/
+secret/
+
+# --- OS / editor / deps ---
+.DS_Store
+__pycache__/
+node_modules/
+.venv/
+.idea/
+.vscode/

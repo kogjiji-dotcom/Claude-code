@@ -1,0 +1,6 @@
+{"id":"q1","from":"a@example.com","subject":"営業時間","body":"営業時間を教えてください。"}
+{"id":"q2","from":"b@example.com","subject":"パスワード","body":"パスワードを忘れました。再設定したいです。"}
+{"id":"q3","from":"c@example.com","subject":"返金希望","body":"先月の料金を返金してください。"}
+{"id":"q4","from":"d@example.com","subject":"エラー","body":"ログイン後に画面が真っ白になるバグがあります。"}
+{"id":"q5","from":"e@example.com","subject":"対応が最悪","body":"何度連絡しても返事がなく非常に不満です。弁護士に相談します。"}
+{"id":"q6","from":"f@example.com","subject":"見積依頼","body":"50名規模での導入を検討しています。見積をお願いします。"}

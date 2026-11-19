@@ -1,0 +1,13 @@
+.env
+logs/
+data/regulations/*
+!data/regulations/README.md
+__pycache__/
+.venv/
+.DS_Store
+*.db
+
+data/eval/
+out/
+data/hr/
+data/recruit/
